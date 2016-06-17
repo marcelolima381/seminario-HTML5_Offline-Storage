@@ -9,4 +9,6 @@ Sua jogo ficou tão legal que agora o Henzo quer passar o dia inteiro nele! Por�
 
 ![Full Mad](https://i.ytimg.com/vi/12D6598_02A/hqdefault.jpg)
 
-Para corroborar com esse vício que está destruindo a mente do coleguinha que quer tomar bomba, você deve adaptar seu jogo para uma versão 2.0: nela sempre que ele encontrar um par esse progresso ficará salvo no localStorage e será recuperado na próxima vez que abrir novamente a página, e para acelerar o carregamento (e diminuir os custos de hosting que o Henzo causará) o site deve fazer o caching de todos arquivos de imagem, mas apenas eles (não queremos o Murão roubando enquanto está offline). 
+Para corroborar com esse vício que está destruindo a mente do coleguinha que já ia tomar bomba, você deve adaptar seu jogo para uma versão 2.0: nela sempre que ele encontrar um par esse progresso ficará salvo e será recuperado na próxima vez que abrir novamente a página, e para acelerar o carregamento (e diminuir os custos de hosting que o Henzo causará) o site deve fazer o caching de todos arquivos de imagem, mas apenas eles (não queremos o Murão roubando enquanto está offline).
+
+> Faça o upload do exercício pro branch ```exercicio```, em um fork desse repositório.
