@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script>
+            function contaClick(tipo) {
+                if (typeof (Storage) !== "undefined") {
+                    switch (tipo) {
+                        case "local":
+                            if (localStorage.clickcount) {
+                                localStorage.clickcount = Number(localStorage.clickcount) + 1;
+                            } else {
+                                localStorage.clickcount = 1;
+                            }
+                            ;
+                            document.getElementById("result1").innerHTML = "Você clicou " + localStorage.clickcount + " vezes(s).";
+                            break;
+                        case "session":
+                            if (sessionStorage.clickcount) {
+                                sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
+                            } else {
+                                sessionStorage.clickcount = 1;
+                            }
+                            ;
+                            document.getElementById("result2").innerHTML = "Você clicou " + sessionStorage.clickcount + " vezes(s).";
+                    }
+
+                } else {
+                    document.getElementsByClassName("tb2").innerHTML = "Saia do IE pls";
+                }
+            }
+            ;
+        </script>
+        <style type="text/css">
+            .tg  {border-collapse:collapse;border-spacing:0;display:flex;justify-content:center;align-items:center;}
+            .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+            .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+            .tg .tb1{font-weight:bold;font-size:15px;text-align:center;vertical-align:top}
+            .tg .tb2{font-style:italic;font-size:18px;text-align:center;vertical-align:top}
+        </style>
+    </head>
+    <body>
+        <table class="tg">
+            <tr>
+                <th class="tb1"><button onclick="contaClick('local')" type="button">Click aqui para local!</button></th>
+                <th class="tb1"><button onclick="contaClick('session')" type="button">Click aqui para sessão!</button></th>
+            </tr>
+            <tr>
+                <td class="tb2" id="result1"></td>
+                <td class="tb2" id="result2"></td>
+            </tr>
+        </table>
+    </body>
+</html>
+
